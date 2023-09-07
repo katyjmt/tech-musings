@@ -1,0 +1,41 @@
+{
+  "name": "tech-musings",
+  "version": "1.0.0",
+  "description": "A tech blog for developers to publish their musings on tech topics, and comment on their peers'.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katyjmt/tech-musings.git"
+  },
+  "keywords": [
+    "blog",
+    "tech",
+    "news",
+    "opinions",
+    "musings"
+  ],
+  "author": "Katy Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/katyjmt/tech-musings/issues"
+  },
+  "homepage": "https://github.com/katyjmt/tech-musings#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "prettier": "3.0.3"
+  }
+}
