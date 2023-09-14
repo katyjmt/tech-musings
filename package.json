@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build-css": "tailwindcss build -i src/styles.css -o public/css/styles.css"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,8 @@
     "express-handlebars": "^7.1.2",
     "express-session": "^1.17.3",
     "mysql2": "^3.6.0",
-    "sequelize": "^6.32.1"
+    "sequelize": "^6.32.1",
+    "slugify": "^1.6.6"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
@@ -41,6 +43,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
     "nodemon": "^3.0.1",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.3"
   }
 }
