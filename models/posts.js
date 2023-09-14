@@ -21,11 +21,6 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // URL Slug (hyphenated string of words created by parsing title using Slugify package)
-    slug: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     // Each blog post is attached to one user
     user_id: {
       type: DataTypes.INTEGER,

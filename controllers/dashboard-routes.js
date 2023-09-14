@@ -2,9 +2,10 @@ const router = require('express').Router();
 // Add models required for dashboard
 const Post = require('../models/Posts');
 const User = require('../models/Users');
+const { withAuth } = require('./utils/withAuth');
 
 // Route to get post data to display list of user posts
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const userPostData = await Post.findAll({
       include: [
@@ -15,7 +16,6 @@ router.get('/', async (req, res) => {
           // id
           // title
           // body
-          // slug
           // user_id
           // user {
           //    id
@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
 
     const plainObjectPostData = postData.map((postItem) => postItem.get({ plain: true }));
 
-    res.status(200).render('home', { plainObjectPostData });
+    res.status(200).render('/dashboard', { plainObjectPostData });
   } catch (err) {
     console.error(err);
     res.status(500).json(err);

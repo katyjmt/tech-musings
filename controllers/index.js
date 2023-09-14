@@ -6,6 +6,8 @@ const homeRoutes = require('./home-routes');
 const dashboardRoutes = require('./dashboard-routes');
 // Blog Detail Routes (View Specifics of Blog Post, incl Comments)
 const blogDetailRoutes = require('./blog-detail-routes');
+// Login and Signup Routes
+const loginSignupRoutes = require('./login-signup-routes');
 
 // API Routes (for POST / PUT / DELETE requests - login/logout, create/edit/delete post, comment)
 const apiRoutes = require('./api');

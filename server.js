@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 3001;
 
 // const hbs = exphbs.create({ helpers }); // ****** REMOVE THIS IF NO HELPERS REQUIRED
 
+// Asks express-sessions to import details of a session into a request
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
