@@ -2,6 +2,7 @@ const router = require('express').Router();
 // Add models required for dashboard
 const Post = require('../models/Posts');
 const User = require('../models/Users');
+// Import withAuth middlewear to check if user is logged in before completing request
 const { withAuth } = require('./utils/withAuth');
 
 // Route to get post data to display list of user posts
