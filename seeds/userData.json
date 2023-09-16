@@ -1,27 +1,22 @@
 [
   {
     "username": "test123",
-    "email": "test@123.com",
     "password": "password12345"
   },
   {
     "username": "thisismyusername",
-    "email": "timu@email.com",
     "password": "password12345"
   },
   {
     "username": "iwanttogotothebeach",
-    "email": "beachkid@gmail.com",
     "password": "password12345"
   },
   {
     "username": "swift",
-    "email": "swift@suzuki.com",
     "password": "password12345"
   },
   {
     "username": "katyjmt",
-    "email": "katyjmt@gmail.com",
     "password": "password12345"
   }
 ]

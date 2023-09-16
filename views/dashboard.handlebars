@@ -1,0 +1,22 @@
+{{!-- TO DO: HIDE THIS SECTION IF NO DATA --}}
+{{#if plainObjectPostData}}
+  <div class="container">
+    <div class="row">
+      <div class="card">
+        <div class="card-heading">
+          <div class="card-title">
+            <h3>{{title}}</h3>
+          </div>
+          <div class="card-author">
+            <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+{{/if}}
+<div class="container">
+  <div class="row">
+    <button class="button">+ New Post</button>
+  </div>
+</div>

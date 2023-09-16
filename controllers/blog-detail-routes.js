@@ -5,10 +5,10 @@ const { Post, User, Comment } = require('../models');
 const { withAuth } = require('./utils/withAuth');
 
 // Route to get data to display post and comments on blog page
-router.get('/:pid', withAuth, async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     // Find post with specified ID and attach associated user data
-    const postItem = await Post.findByPk(req.params.pid, {
+    const postItem = await Post.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -33,6 +33,22 @@ router.get('/:pid', withAuth, async (req, res) => {
       where: {
         post_id: req.params.pid,
       },
+      include: [
+        {
+          model: User,
+          attributes: ['id', 'username'],
+          // Structure of objects returned:
+          // id
+          // comment
+          // user_id
+          // post_id
+          // user {
+          //    id
+          //    username
+          //    createdAt
+          // }
+        },
+      ],
     });
 
     const plainObjectComments = commentData.map((commentItem) => commentItem.get({ plain: true }));

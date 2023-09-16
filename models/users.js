@@ -21,14 +21,6 @@ User.init(
       type: DataTypes.STRING(30),
       allowNull: false,
     },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
-    },
     // Encrypted using BCrypt package
     password: {
       type: DataTypes.STRING,

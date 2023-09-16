@@ -18,7 +18,7 @@ Post.init(
     },
     // Blog Post Content
     body: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     // Each blog post is attached to one user

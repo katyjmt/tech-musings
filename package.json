@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "seed": "node seeds/seed.js",
     "build-css": "tailwindcss build -i src/styles.css -o public/css/styles.css"
   },
   "repository": {
@@ -34,8 +35,7 @@
     "express-handlebars": "^7.1.2",
     "express-session": "^1.17.3",
     "mysql2": "^3.6.0",
-    "sequelize": "^6.32.1",
-    "slugify": "^1.6.6"
+    "sequelize": "^6.32.1"
   },
   "devDependencies": {
     "eslint": "^8.48.0",

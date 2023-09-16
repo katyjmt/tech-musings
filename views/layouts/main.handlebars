@@ -1,27 +1,40 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
-  <title>The Tech Blog</title>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
-        {{if !loggedIn}}
-        <li><a href="/login">Login</a></li>
-        {{/if}}
-        {{if loggedIn}}
-        <li><a id="logout-btn">Logout</a></li> 
-        {{/if}}
-      </ul>
-    </nav>
-    <h1>The Tech Blog</h1>
-  </header>
-  {{{body}}}
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/skeleton.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>The Tech Blog</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row" id="nav-bar">
+          <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/dashboard">Dashboard</a></li>
+              {{#unless loggedIn}}
+                <li><a href="/login">Login</a></li>
+              {{/unless}}
+              {{#if loggedIn}}
+                <li><a id="logout-btn">Logout</a></li>
+              {{/if}}
+            </ul>
+          </nav>
+          <h1>The Tech Blog</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      {{{body}}}
+    </main>
+  </body>
 </html>

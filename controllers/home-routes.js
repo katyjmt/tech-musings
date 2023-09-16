@@ -1,7 +1,6 @@
 const router = require('express').Router();
 // Add models required for home page
-const Post = require('../models/Posts');
-const User = require('../models/Users');
+const { Post, User } = require('../models');
 
 // Route to get post and user data to display list of recent posts on home page
 router.get('/', async (req, res) => {
@@ -33,6 +32,8 @@ router.get('/', async (req, res) => {
     });
 
     const plainObjectPostData = postData.map((postItem) => postItem.get({ plain: true }));
+
+    console.log(plainObjectPostData);
 
     res.status(200).render('home', {
       plainObjectPostData,

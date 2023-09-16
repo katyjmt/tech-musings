@@ -6,7 +6,6 @@ router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,
-      email: req.body.email,
       password: req.body.password,
     });
 
@@ -28,13 +27,13 @@ router.post('/login', async (req, res) => {
     // Find user in db with email that matches the one submitted
     const dbUserData = await User.findOne({
       where: {
-        email: req.body.email,
+        username: req.body.username,
       },
     });
 
     // If email can't be found, return error message
     if (!dbUserData) {
-      res.status(400).json({ message: 'Incorrect email or password, please try again. '});
+      res.status(400).json({ message: 'Incorrect email or password, please try again.' });
       return;
     }
 
@@ -43,7 +42,7 @@ router.post('/login', async (req, res) => {
 
     // If password isn't valid, return error message
     if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect email or password, please try again.'});
+      res.status(400).json({ message: 'Incorrect email or password, please try again.' });
       return;
     }
 

@@ -33,9 +33,9 @@ router.get('/', withAuth, async (req, res) => {
       ],
     });
 
-    const plainObjectPostData = postData.map((postItem) => postItem.get({ plain: true }));
+    const plainObjectPostData = userPostData.map((postItem) => postItem.get({ plain: true }));
 
-    res.status(200).render('/dashboard', { plainObjectPostData });
+    res.status(200).render('dashboard', { plainObjectPostData, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.error(err);
     res.status(500).json(err);
