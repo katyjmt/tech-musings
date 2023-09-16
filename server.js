@@ -28,7 +28,7 @@ app.use(
   }),
 );
 
-app.engine('handlebars', hbs.engine);
+app.engine('handlebars', hbs.engine());
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, './views'));
 
